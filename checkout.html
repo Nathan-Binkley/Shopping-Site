@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<!--
+  Copyright (c) 2015 Jon Cooper
+  This file is part of js-cart.
+  Documentation, related files, and licensing can be found at
+    <https://github.com/joncoop/js-cart>.
+-->
+
+<html>
+<head>
+<title>Ghosts: Checkout</title>
+<link rel="stylesheet" href="css/cart.css" type="text/css" />
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/grid_6.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body onload="loadCart()">
+<header>
+<div class="container">
+    <div class="row">
+        <div class="one-fifth">
+            <a href="index.html"><img src='img/boo.png' alt="boo" height="100"></a> 
+        </div>
+        <div class="three-fifths">
+            <h1><a href="index.html">Boo's Ghost<br>Emporium</a></h1>
+        </div>
+        <div class="one-fifth">
+            <div id="cart_links">
+                <a href="cart.html"><img class="cart_icon" src="img/cart_icon.png" alt="cart icon" /></a>
+                <span class="cart_link"><a id="cart_link" href="#">Shopping Cart</a></span> <br />
+                <span class="item_count">Items (<span id="item_count">0</span>)</span>
+                <span class="checkout_link"><a id="checkout_link" href="#">Checkout</a></span>
+            </div>
+            <!-- end widget -->
+        </div>
+    </div>
+</div>
+</header>
+<section>
+<h2 class="center SPACE">Checkout</h2>
+
+<p class="center SPACE">You have reached the checkout page. This is where you could request shipping
+and billing information to complete the order.</p>
+
+<form action="thanks.html" class="center pure-form SPACE">
+  First Name: <input type="text" name="first name" required> Last Name: <input type="text" name="last name" required> <br>
+  Address: <input type="text" name="address" required>
+  City: <input type="text" name="city" required> 
+  State: <select id="state" required>
+            <option>AL</option>
+            <option>AK</option>
+            <option>AZ</option>
+            <option>AR</option>
+            <option>CA</option>
+            <option>CO</option>
+            <option>CT</option>
+            <option>DE</option>
+            <option>FL</option>
+            <option>GA</option>
+            <option>HI</option>
+            <option>ID</option>
+            <option>IL</option>
+            <option>IN</option>
+            <option>IA</option>
+            <option>KS</option>
+            <option>KY</option>
+            <option>LA</option>
+            <option>ME</option>
+            <option>MD</option>
+            <option>MA</option>
+            <option>MI</option>
+            <option>MN</option>
+            <option>MS</option>
+            <option>MO</option>
+            <option>MT</option>
+            <option>NE</option>
+            <option>NV</option>
+            <option>NH</option>
+            <option>NJ</option>
+            <option>NM</option>
+            <option>NY</option>
+            <option>NC</option>
+            <option>ND</option>
+            <option>OH</option>
+            <option>OK</option>
+            <option>OR</option>
+            <option>PA</option>
+            <option>RI</option>
+            <option>SC</option>
+            <option>SD</option>
+            <option>TN</option>
+            <option>TX</option>
+            <option>UT</option>
+            <option>VT</option>
+            <option>VA</option>
+            <option>WA</option>
+            <option>WV</option>
+            <option>WI</option>
+            <option>WY</option>
+            <option>Other</option>
+        </select> 
+  Zip: <input type="text" name="state" pattern="(\d{5}([\-]\d{4})?)" required><br>
+  E-mail: <input type="text" name="e-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required> 
+  Phone: <input type="text" name="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="555-555-1212"> <br>
+  Credit Card:  <input type="text" name="card_num" pattern="\d{16}" required> 
+  Security Code: <input type="password" name="security" pattern="\d{3}" required> 
+  Expiration: <input type="text" name="expiration" pattern="(0|1)[0-9]\/[0-9]{2}" required> <br>
+  <input type="submit" value="Place Order">
+</form>
+</div>
+</section>
+<footer>
+    <div class="row">
+        <div class="full center">
+            <p>Nathan B 2k16<sup>&copy;</sup></p>   
+        </div>
+    </div>
+</footer>
+<script src="js/cart.js"></script>
+
+</body>
+</html>
